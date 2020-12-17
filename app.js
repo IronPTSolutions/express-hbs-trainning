@@ -1,8 +1,10 @@
 const path = require('path');
 const express = require('express');
 const logger = require('morgan');
-const hbs = require('handlebars');
+const hbs = require('hbs');
 const app = express();
+
+hbs.registerPartials(__dirname + '/views/partials');
 
 /* Middlewares */
 app.use(logger('dev'));

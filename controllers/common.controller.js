@@ -1,8 +1,5 @@
-module.exports.about = (req, res, next) => {
-    res.render('common/about', {
-        name: 'Julio',
-        time: new Date().toString(),
-        showTime: Math.random() > 0.5,
-        cities: ['Menorca', 'Huelva', 'Barcelona'],
-    });
+const episodes = require('../data/got.json');
+
+module.exports.episodes = (req, res, next) => {
+    res.render('episodes', { episodes });
 };
