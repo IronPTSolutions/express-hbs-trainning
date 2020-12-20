@@ -6,7 +6,6 @@ const app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
 
-/**Middlewares */
 app.use(logger('dev'));
 
 /*
