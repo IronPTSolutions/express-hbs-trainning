@@ -1,33 +1,49 @@
+<div class=class"bg-white">
 
-<h1>Llistat d'episodis de Juego de Tronos</h1>
-<div class="row mb-3">
-  <div class="col-12 col-md-3">
-    <form action="/episodes" method="get" class="row g-3">
-      <div class="col-auto">
-        <div class="input-group">
-          <div class="input-group-text">@</div>
-          <input type="text" class="form-control" name="name" placeholder="Busca" value="{{ name }}">
+<div class="card ">
+  <div class="p-3">
+  </div>
+
+  <div class="card-body mt-3 d-flex justify-content-end">
+    <blockquote class="blockquote mb-0">
+      <form action="/episodes" method="get" class="row g-3">
+        <div class="col-auto">
+          <div class="input-group">
+            <div class="input-group-text">Search by title</div>
+            <input type="text" class="form-control" name="name" placeholder="">
+          </div>
         </div>
-      </div>
-      <div class="col-auto">
-        <button class="btn btn-primary"><i class="fal fa-search"></i>Busca</button> 
-      </div>
-    </form>
+        <div class="col-auto">
+          <button class="btn btn-primary"><i class="fal fa-search"></i>Search</button>
+
+          {{#if clean}} <a class="btn btn-primary" href="/episodes?name=#" role="button">Clean Search</a> {{/if}}
+
+        </div>
+      </form>
+      <footer class="blockquote-footer pt-3 d-flex justify-content-end">Listed episodes: <cite
+          title="Source Title">{{episodes.length}}</cite>
+      </footer>
+    </blockquote>
   </div>
 </div>
 
 
 
 
-<h3>Episodios listados: {{episodes.length}}</h3>
-<div class="row row-cols-1 row-cols-md-3   mx-auto "  style="max-width: 1200px;">
 
-    {{#each episodes as |epi| }}
-    {{#with epi}}
 
-    {{>card}}
+<div class=" row row-cols-3 row-cols-md-3 g-4  mx-auto " style="max-width: 1200px;">
 
-    {{/with}}
-    {{/each}}
+  {{#each episodes as |epi| }}
+  {{#with epi}}
+
+  {{>card}}
+
+  {{/with}}
+  {{/each}}
+
+</div>
+
+
 
 </div>

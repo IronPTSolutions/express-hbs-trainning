@@ -13,30 +13,15 @@ module.exports.home = (req, res, next) => {
     res.render('common/home')
 }
 
-// module.exports.episodes = (req, res, next) => {
-
-//         res.render('common/episodes', {
-//             epis: epis
-//         })
-//     }
-
 module.exports.episodes = (req, res, next) => {
     const { name } = req.query;
-    const episodes = epis.filter(episodi => name ? episodi.name.includes(name) : true)
+    let episodes =
+        epis.filter(episodi => name ? episodi.name.includes(name) : true)
+    let clean = false;
+    if (episodes.length === epis.length) { clean = false } else { clean = true }
     res.render('common/episodes', {
-        episodes: episodes
+        episodes: episodes,
+        clean: clean
     });
 }
 
-
-// module.exports.list = (req, res, next) => {
-//     const { user } = req.query;
-//     const tweets = tweetsDB
-//         .filter(tweet => user ? tweet.user.includes(user) : true)
-//         .sort((t1, t2) => t2.createdAt - t1.createdAt);
-
-//     res.render('tweets/list', {
-//         tweets: tweets,
-//         user: user
-//     });
-// }

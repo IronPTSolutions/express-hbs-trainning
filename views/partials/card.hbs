@@ -1,10 +1,16 @@
-<div class="card border-primary shadow p-3 mb-5  bg-white rounded"> 
+<div class="mr-1 mt-5">
 
-    <img class="mx-auto shadow p-0 mb-2  bg-white rounded" src="{{ image.medium }}" alt="..." style="height: 200px;">
-    <div class="card-body">
-        <h5 class="card-title">{{ name }}</h5>
-        <p class="card-text"><small class="text-muted">Season: {{ season }} Episode: {{ number }}</small></p>
-        <p class="card-body">{{ summary }}</p>
-        <p class="card-text"><small class="text-muted">{{ tagline }}</small></p>
+    <div class="card border-white shadow p-3 mb-5  bg-white rounded">
+        <img class="mx-auto shadow p-0 mb-2  bg-white rounded" src="{{ image.medium }}" alt="..."
+            style="height: 160px;">
+        <div class="card-body">
+            <h5 class="card-title">{{ name }}</h5>
+
+            <span class="badge bg-warning">Season: {{ season }}</span> <span class="badge bg-success">Episode: {{ number
+                }}</span> <span class="badge bg-primary">{{ airdate }}</span>
+            <p class="card-body"> {{{summary}}} </p>
+            <p class="card-text"><small class="text-muted">{{ tagline }}</small></p>
+        </div>
     </div>
+
 </div>
