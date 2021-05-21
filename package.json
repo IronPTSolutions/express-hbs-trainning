@@ -1,7 +1,7 @@
 {
   "name": "express-hello-world",
   "version": "1.0.0",
-  "description": "",
+  "description": "Echa un vistazo al fichero data/got.json",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -24,7 +24,16 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "prettier": "^2.1.1",
-    "nodemon": "^2.0.4"
-  }
+    "nodemon": "^2.0.7",
+    "prettier": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elenamarsili/express-hbs-trainning.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/elenamarsili/express-hbs-trainning/issues"
+  },
+  "homepage": "https://github.com/elenamarsili/express-hbs-trainning#readme"
 }
