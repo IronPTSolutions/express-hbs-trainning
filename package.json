@@ -5,14 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon -e hbs,js,css app.js"
+    "dev": "nodemon -e hbs,js,css,.env app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "handlebars": "^4.7.6",
-    "hbs": "^4.1.1",
+    "hbs": "^4.1.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
